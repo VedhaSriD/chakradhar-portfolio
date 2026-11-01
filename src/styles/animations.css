@@ -1,0 +1,12 @@
+@keyframes drift { 0%,100% { transform: translateY(0) rotate(0deg); } 50% { transform: translateY(-14px) rotate(4deg); } }
+@keyframes shift { 0%,100% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } }
+.animate-drift { animation: drift 9s ease-in-out infinite; }
+.bg-shift { background-size: 200% 200%; animation: shift 16s ease infinite; }
+.grid-pattern {
+  background-image: linear-gradient(rgba(183,197,174,.08) 1px, transparent 1px), linear-gradient(90deg, rgba(183,197,174,.08) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation: none !important; transition-duration: .01ms !important; }
+}
